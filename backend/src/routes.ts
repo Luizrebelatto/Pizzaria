@@ -13,13 +13,15 @@ const router = Router();
 
 // User Routes
 router.post('/users', new CreateUserController().handle);
-
 router.post('/session', new AuthUserController().handle);
-
 router.get('/user-info', isAuthenticated, new DetailUserController().handle);
 
 // Category Routes
 router.post('/category', isAuthenticated, new CreateCategoryController().handle);
 router.get('/list-category', isAuthenticated, new ListCategoryController().handle);
+
+// Product Routes
+
+
 
 export { router };
