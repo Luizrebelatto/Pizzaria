@@ -5,9 +5,11 @@ import { AuthUserController } from './controllers/user/AuthUserController';
 import { DetailUserController } from './controllers/user/DetailUserController';
 
 import { CreateCategoryController } from './controllers/category/CreateCategoryController';
+import { ListCategoryController } from './controllers/category/ListCategoryController';
+
+import { CreateProductController } from './controllers/product/CreateProductController';
 
 import { isAuthenticated } from './middlewares/isAuthenticated';
-import { ListCategoryController } from './controllers/category/ListCategoryController';
 
 const router = Router();
 
@@ -21,7 +23,7 @@ router.post('/category', isAuthenticated, new CreateCategoryController().handle)
 router.get('/list-category', isAuthenticated, new ListCategoryController().handle);
 
 // Product Routes
-
+router.post('/product', isAuthenticated, new CreateProductController().handle);
 
 
 export { router };
