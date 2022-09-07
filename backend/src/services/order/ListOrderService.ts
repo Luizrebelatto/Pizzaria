@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma";
 
-class ListOrderService {
+export class ListOrderService {
   async execute() {
 
     const order = await prismaClient.order.findMany({
@@ -16,5 +16,3 @@ class ListOrderService {
     return order;
   }
 }
-
-export { ListOrderService }

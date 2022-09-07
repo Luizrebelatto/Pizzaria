@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import { ListCategoryService } from '../../services/category/ListCategoryService';
 
-class ListCategoryController {
+export class ListCategoryController {
   async handle(req: Request, res: Response) {
 
     const listCategoryService = new ListCategoryService();
@@ -12,5 +12,3 @@ class ListCategoryController {
     res.json(category);
   }
 }
-
-export { ListCategoryController };

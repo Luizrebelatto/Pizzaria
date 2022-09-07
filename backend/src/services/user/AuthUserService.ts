@@ -7,7 +7,7 @@ interface AuthRequest {
   password: string;
 }
 
-class AuthUserService {
+export class AuthUserService {
   async execute({ email, password }: AuthRequest) {
     
     const user = await prismaClient.user.findFirst({
@@ -37,5 +37,3 @@ class AuthUserService {
     return { id: user.id, name: user.name, email: user.email, token: token }
   }
 }
-
-export { AuthUserService }

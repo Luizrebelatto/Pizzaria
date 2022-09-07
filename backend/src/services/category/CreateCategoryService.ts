@@ -4,7 +4,7 @@ interface CategoryRequest {
   name: string
 }
 
-class CreateCategoryService {
+export class CreateCategoryService {
   async execute({ name }: CategoryRequest){
 
     if (name === '') throw new Error("name invalid");
@@ -20,5 +20,3 @@ class CreateCategoryService {
     return category;
   }
 }
-
-export { CreateCategoryService };

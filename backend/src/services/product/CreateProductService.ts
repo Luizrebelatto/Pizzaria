@@ -8,7 +8,7 @@ interface ProductRequest {
   banner: string;
 }
 
-class CreateProductService {
+export class CreateProductService {
   async execute({ name, price, description, category_id, banner }: ProductRequest) {
 
     const product = await prismaClient.product.create({
@@ -23,5 +23,3 @@ class CreateProductService {
     return product;
   }
 }
-
-export { CreateProductService };

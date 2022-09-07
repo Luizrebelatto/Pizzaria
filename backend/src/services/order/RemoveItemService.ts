@@ -4,7 +4,7 @@ interface ItemRequest {
   item_id: string;
 }
 
-class RemoveItemService {
+export class RemoveItemService {
   async execute({ item_id }: ItemRequest) {
 
     const item = await prismaClient.item.delete({
@@ -16,5 +16,3 @@ class RemoveItemService {
     return item;
   }
 }
-
-export { RemoveItemService }

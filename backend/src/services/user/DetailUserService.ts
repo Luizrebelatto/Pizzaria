@@ -1,6 +1,6 @@
 import prismaClient from "../../prisma";
 
-class DetailUserService {
+export class DetailUserService {
   async execute(user_id: string) {
     const user = await prismaClient.user.findFirst({
       where: {
@@ -11,5 +11,3 @@ class DetailUserService {
     return user;
   }
 }
-
-export { DetailUserService }

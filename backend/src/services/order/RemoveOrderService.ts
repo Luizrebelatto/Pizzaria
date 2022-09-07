@@ -4,7 +4,7 @@ interface OrderRequest {
   order_id: string;
 }
 
-class RemoveOrderService {
+export class RemoveOrderService {
   async execute({ order_id }: OrderRequest) {
 
     const order = await prismaClient.order.delete({
@@ -16,5 +16,3 @@ class RemoveOrderService {
     return order;
   }
 }
-
-export { RemoveOrderService }

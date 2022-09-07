@@ -2,7 +2,7 @@ import { Response, Request } from 'express';
 
 import { CreateOrderService } from '../../services/order/CreateOrderService';
 
-class CreateOrderController {
+export class CreateOrderController {
   async handle(req: Request, res: Response) {
     const { name, table } = req.body;
 
@@ -13,5 +13,3 @@ class CreateOrderController {
     return res.json(order);
   }
 }
-
-export { CreateOrderController}

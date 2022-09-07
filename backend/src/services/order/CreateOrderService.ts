@@ -5,7 +5,7 @@ interface OrderRequest {
   name: string;
 }
 
-class CreateOrderService {
+export class CreateOrderService {
   async execute({ table, name }: OrderRequest) {
 
     const order = await prismaClient.order.create({
@@ -18,5 +18,3 @@ class CreateOrderService {
     return order;
   }
 }
-
-export { CreateOrderService }

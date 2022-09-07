@@ -4,7 +4,7 @@ interface ProductRequest {
   category_id: string;
 }
 
-class ListByCategoryService {
+export class ListByCategoryService {
   async execute({ category_id } : ProductRequest) {
     const findByCategory = await prismaClient.product.findMany({
       where: {
@@ -15,5 +15,3 @@ class ListByCategoryService {
     return findByCategory;
   }
 }
-
-export { ListByCategoryService };
