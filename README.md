@@ -1,4 +1,4 @@
-# Fisiotheapp
+# Pizzaria
 
 <h1 align="center">Pizzaria</h1>
 
@@ -13,9 +13,7 @@
 <br>
 
 ## 💻 Projeto
-
-Solução do desafio [Link](https://www.devchallenge.com.br/challenges/5ec1cd5b9cd83622b185db7f/details) da plataforma [DevChallenge](https://www.devchallenge.com.br/)
-
+Sistema para controle de pedidos
 
 ## ✨ Tecnologias
 
@@ -26,16 +24,16 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - prisma
 - postgresql
 
-##  📚  Bibliotecas
-
-Esse projeto foi desenvolvido com as seguintes Bibliotecas:
-
-- React Navigation - Navegação entre telas
-- Styled Components - Estilizar os componentes
-
 ##  📱  Features
 
-- Navegação entre as telas
+- Criação de usuario
+- Autenticação de usuarios
+- Mostrar informações dos usuarios
+- Criação e Deletar de pedidos
+- Adicionar e deletar itens em um pedido
+- Criar e listar produtos
+- Finalizar pedido
+
 ## 🚀 Como executar
 
 1) - Clonar o projeto do github:
@@ -47,7 +45,7 @@ Esse projeto foi desenvolvido com as seguintes Bibliotecas:
     `npm install` ou
     `yarn install`
 
-4) - Abrir Emulador e digitar no terminal o comando:
+4) - Abrir o terminal e digitar o comando:
     `yarn dev` ou `npm dev`,
 ---
 
